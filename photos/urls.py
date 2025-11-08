@@ -1,7 +1,6 @@
 from django.urls import path,include
 from photos import views
 
-
 urlpatterns = [
     path('add/', views.photo_add_view, name='photos-add'),
     path('<int:pk>/', include([
