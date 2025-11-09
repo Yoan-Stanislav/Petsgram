@@ -9,3 +9,4 @@ urlpatterns = [
     path('photos/', include('photos.urls')),
 ]
 
+
