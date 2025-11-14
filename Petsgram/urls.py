@@ -8,5 +8,3 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('photos/', include('photos.urls')),
 ]
-
-
