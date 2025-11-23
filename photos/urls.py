@@ -6,5 +6,4 @@ urlpatterns = [
     path('<int:pk>/', include([
         path('', views.photo_details, name='photos-details'),
         path('edit/', views.photo_edit_view, name='photos-edit'),]))
-
 ]
