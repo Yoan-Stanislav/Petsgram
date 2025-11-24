@@ -7,6 +7,5 @@ def photo_add_view(request):
 def photo_details(request):
     return render(request, 'photos/photo-details-page.html')
 
-
 def photo_edit_view(request):
     return render(request, 'photos/photo-edite-page.html')
