@@ -1,5 +1,5 @@
 {%extends 'common/base.html' %}
-
+{% load static %}
 {% block content%}
     <main>
       <div class="profile">
@@ -7,7 +7,7 @@
         <div class="profile-data">
           <div class="profile_img">
             <div class="image">
-              <img src="/static/images/person.png" alt="img8" />
+              <img src="{% static 'images/person.png'%}" alt="img8" />
             </div>
           </div>
           <div class="personal">
@@ -18,7 +18,7 @@
               <a href="#">
                 <img
                   class="edit-img"
-                  src="/static/images/edit-pen-icon-6.jpg"
+                  src="{% static 'images/edit-pen-icon-6.jpg'%}"
                   alt="edit button"
                 />
               </a>
@@ -27,7 +27,7 @@
               <a href="">
                 <img
                   class="bin-img"
-                  src="/static/images/icon-remove-22.jpg"
+                  src="{% static 'images/icon-remove-22.jpg' %}"
                   alt="bin button"
                 />
               </a>
@@ -231,22 +231,12 @@
 
         <img
           class="no-posts"
-          src="/static/images/no_posts.png"
+          src="{%static 'images/no_posts.png' %}"
           alt="no posts"
         />
       </div>
 
       <!-- End Profile Details Section -->
     </main>
-    <!-- End Main Section -->
 
-    <!-- Start Footer Section -->
-    <div class="footer">
-      <span class="footer-section">
-        © 2024 SOFTUNI WORKSHOP FOR PYTHON WEB MODULE
-      </span>
-    </div>
-    <!-- End Footer Section -->
-  </body>
-</html>
 {% endblock %}
