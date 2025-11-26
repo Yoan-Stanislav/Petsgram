@@ -5,13 +5,13 @@ from django.template.defaultfilters import slugify
 class Pet(models.Model):
     name = models.CharField(max_length = 30)
     personal_photo = models.URLField()
-    date_of_birth = models.DateField()
-    null = True
-    blank = True
+    date_of_birth = models.DateField(
+    null = True,
+    blank = True)
 
-    slug = models.SlugField()
-    unique = True
-    blank = True
+    slug = models.SlugField(
+    unique = True,
+    blank = True)
 
     def save(self, *args , **kwargs):
 
