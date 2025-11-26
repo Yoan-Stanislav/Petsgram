@@ -10,6 +10,8 @@ class Pet(models.Model):
     blank = True
 
     slug = models.SlugField()
+    unique = True
+    blank = True
 
     def save(self, *args , **kwargs):
 
