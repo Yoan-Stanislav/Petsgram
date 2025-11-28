@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from common.models import Comment
+from photos.models import Photo
+
+
+@admin.register(Comment)
+class CommentsAdmin(admin.ModelAdmin):
+    pass

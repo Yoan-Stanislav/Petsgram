@@ -5,7 +5,8 @@ from photos.validators import SizeCheck
 
 class Photo(models.Model):
     photo = models.ImageField(
-        validators=[SizeCheck(5)],
+        validators=[SizeCheck(100)],
+        upload_to = 'files'
 
     )
     description = models.TextField(

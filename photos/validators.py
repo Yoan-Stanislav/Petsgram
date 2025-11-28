@@ -5,7 +5,7 @@ from django.utils.deconstruct import deconstructible
 @deconstructible
 class SizeCheck(models.Model):
 
-    def __init_(self, size_limit, massage):
+    def __init__(self, size_limit, massage = None):
         self.size_limit = size_limit
         self.massage = massage
 
@@ -21,7 +21,7 @@ class SizeCheck(models.Model):
         self.__massage = value
 
     def __call__(self, value):
-        if self.size_limit * 1048 ** 2 < value.size():
+        if self.size_limit * 1048 ** 2 < value.size:
             raise ValueError(self.massage)
 
 
