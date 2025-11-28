@@ -5,7 +5,7 @@ from django.utils.deconstruct import deconstructible
 @deconstructible
 class SizeCheck(models.Model):
 
-    def __init__(self, size_limit, massage):
+    def __init_(self, size_limit, massage):
         self.size_limit = size_limit
         self.massage = massage
 
@@ -15,7 +15,7 @@ class SizeCheck(models.Model):
 
     @massage.setter
     def massage(self, value):
-        if value is None
+        if value is None:
             self.__massage = f"This file is too big - {value} MB"
 
         self.__massage = value
