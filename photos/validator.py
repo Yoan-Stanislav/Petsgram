@@ -20,7 +20,8 @@ class SizeCheck(models.Model):
 
         self.__massage = value
 
-    def __call__(self, size_limit):
-        if size_limit >
+    def __call__(self, value):
+        if self.size_limit * 1048 ** 2 < value.size():
+            raise ValueError(self.massage)
 
 
