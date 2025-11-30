@@ -1,9 +1,10 @@
+from django.core.exceptions import ValidationError
 from django.db import models
 from django.utils.deconstruct import deconstructible
 
 
 @deconstructible
-class SizeCheck(models.Model):
+class SizeCheck:
 
     def __init__(self, size_limit, massage = None):
         self.size_limit = size_limit
@@ -16,12 +17,12 @@ class SizeCheck(models.Model):
     @massage.setter
     def massage(self, value):
         if value is None:
-            self.__massage = f"This file is too big - {value} MB"
-
-        self.__massage = value
+            self.__massage = f"This file is too big - {value} MB, max is {self.size_limit} MB"
+        else:
+            self.__message = value
 
     def __call__(self, value):
-        if self.size_limit * 1048 ** 2 < value.size:
-            raise ValueError(self.massage)
+        if self.size_limit * 1048 * 1048 < value.size:
+            raise ValidationError(self.__massage)
 
 
