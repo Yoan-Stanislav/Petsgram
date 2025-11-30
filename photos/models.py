@@ -1,11 +1,10 @@
 from django.core.validators import MaxLengthValidator
 from django.db import models
 from photos.validators import SizeCheck
-# Create your models here.
 
 class Photo(models.Model):
     photo = models.ImageField(
-        validators=[SizeCheck(100)],
+        validators=[SizeCheck(5)],
         upload_to = 'files'
 
     )
