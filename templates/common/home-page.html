@@ -12,6 +12,9 @@
                     <img src="{% static 'images/search.png' %}" height="18" alt="img2">
                 </button>
             </form>
+            {% for photo in all_photos %}
+                {% include 'common/pet-post.html' %}
+            {% endblock %}
 
             <div class="card">
                 <div class="top">

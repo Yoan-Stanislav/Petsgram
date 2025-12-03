@@ -8,7 +8,9 @@
 
 
             </div>
-            <!-- End Pet Photo Post Section -->
+            {% for photo in all_photos %}
+                {% include 'common/pet-post.html' %}
+            {% endblock %}
 
         </div>
     </div>
