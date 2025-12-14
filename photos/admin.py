@@ -1,6 +1,7 @@
 from django.contrib import admin
 from photos.models import Photo
 
+
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ('id', 'get_tagged_pets', 'date_of_publication', "description")
