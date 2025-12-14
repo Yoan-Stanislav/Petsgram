@@ -6,7 +6,6 @@ class PhotoAdmin(admin.ModelAdmin):
     list_display = ('id', 'get_tagged_pets', 'date_of_publication', "description")
 
 
-list_filter = ('date_of_publication',)
     @staticmethod
     def get_tagged_pets(obj:Photo):
         return ','.join([pet.name for pet in obj.tagged_pets.all()])
