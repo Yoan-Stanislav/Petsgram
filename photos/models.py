@@ -6,7 +6,6 @@ class Photo(models.Model):
     photo = models.ImageField(
         validators=[SizeCheck(5)],
         upload_to = 'files'
-
     )
     description = models.TextField(
         max_length=300,
