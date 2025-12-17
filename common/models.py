@@ -20,7 +20,6 @@ class Comment(models.Model):
     def __str__(self):
         return self.text[:25]
 
-
 class Like(models.Model):
     to_photo = models.ForeignKey(
         to = Photo,
