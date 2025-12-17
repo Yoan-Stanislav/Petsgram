@@ -9,3 +9,4 @@ urlpatterns = [
         path("delete/", views.profile_delete_view, name="delete-profile"),
         path('', views.profile_details_view, name='profile-details')]))
 ]
+
