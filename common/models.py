@@ -1,7 +1,5 @@
 from django.db import models
-
 from photos.models import Photo
-
 
 class Comment(models.Model):
     text = models.TextField(
