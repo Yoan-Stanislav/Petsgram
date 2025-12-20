@@ -1,7 +1,5 @@
 from django.db import models
 from django.template.defaultfilters import slugify
-
-
 class Pet(models.Model):
     name = models.CharField(max_length = 30)
     personal_photo = models.URLField()
