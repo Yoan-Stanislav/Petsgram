@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 def pet_add_view(request):
     return render(request, 'pets/pet-add-page.html')
 
