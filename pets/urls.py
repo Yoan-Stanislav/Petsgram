@@ -1,6 +1,8 @@
 from django.urls import path, include
 from pets import views
 urlpatterns = [
+
+
     path("add/", views.pet_add_view, name="pet-add"),
     path("<str:username>/pet/<slug:pet_slug>/", include([
         path("", views.pet_details_view, name="pet-details"),
