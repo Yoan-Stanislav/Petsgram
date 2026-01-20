@@ -6,7 +6,7 @@ def pet_delete_view(request):
     return render(request, 'pets/pet-delete-page.html')
 
 def pet_details_view(request):
-    return render(request, 'pets/pet-detail-page.html')
+    return render(request, 'pets/pet-details-page.html')
 
 def pet_edit_view(request):
     return render(request, 'pet/pet-edit-page.html')
